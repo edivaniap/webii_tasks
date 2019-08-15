@@ -77,4 +77,11 @@ public class DadosFrete {
 		this.fretePagoporEmitente = fretePagoporEmitente;
 	}
 
+	@Override
+	public String toString() {
+		return "DadosFrete [dataSaida=" + dataSaida + ", nomeTransportador="
+				+ nomeTransportador + ", placaVeiculo=" + placaVeiculo
+				+ ", municipio=" + municipio + ", uf=" + uf
+				+ ", fretePagoporEmitente=" + fretePagoporEmitente + "]";
+	}
 }
