@@ -1,7 +1,7 @@
 package br.ufrn.imd.almoxarifado.dominio;
 
-import br.ufrn.imd.almoxarifado.rh_dominio.Contato;
-import br.ufrn.imd.almoxarifado.rh_dominio.Endereco;
+import br.ufrn.imd.almoxarifado.dominio.rh.Contato;
+import br.ufrn.imd.almoxarifado.dominio.rh.Endereco;
 
 public class DadosEntrega {
 	private Endereco endereco;
