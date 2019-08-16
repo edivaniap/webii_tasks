@@ -20,7 +20,7 @@ public class ChecklistRecebimentoComum {
 	private int numeroConhecimento;
 	private String motorista;
 	private String observacoes;
-	private Funcionarioo conferente;
+	private Funcionario conferente;
 	private List<Documento> anexoFotos;
 	private boolean aprovado;
 	private EntradaEstoque entradaEstoque;
