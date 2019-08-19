@@ -43,4 +43,9 @@ public class DadosEntrega {
 	public void setContato(Contato contato) {
 		this.contato = contato;
 	}
+
+	@Override
+	public String toString() {
+		return "DadosEntrega [endereco=" + endereco + ", local=" + local + ", contato=" + contato + "]";
+	}
 }

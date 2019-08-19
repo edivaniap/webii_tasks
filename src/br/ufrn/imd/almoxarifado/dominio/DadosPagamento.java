@@ -51,4 +51,10 @@ public class DadosPagamento {
 	public void setConta(String conta) {
 		this.conta = conta;
 	}
+
+	@Override
+	public String toString() {
+		return "DadosPagamento [banco=" + banco + ", agencia=" + agencia + ", conta=" + conta
+				+ ", codigoIdentificacaoDV=" + codigoIdentificacaoDV + "]";
+	}
 }

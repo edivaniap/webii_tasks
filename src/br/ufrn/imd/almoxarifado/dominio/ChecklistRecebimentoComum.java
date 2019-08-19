@@ -1,6 +1,8 @@
 package br.ufrn.imd.almoxarifado.dominio;
 
 import java.util.Date;
+import java.util.List;
+import java.io.File;
 
 import br.ufrn.imd.almoxarifado.dominio.rh.Funcionario;
 
@@ -21,7 +23,7 @@ public class ChecklistRecebimentoComum {
 	private String motorista;
 	private String observacoes;
 	private Funcionario conferente;
-	private List<Documento> anexoFotos;
+	private List<File> anexoFotos;
 	private boolean aprovado;
 	private EntradaEstoque entradaEstoque;
 	
@@ -33,8 +35,8 @@ public class ChecklistRecebimentoComum {
 			boolean embalagemUmida, boolean embalagemDeformada,
 			boolean embalagemVazada, boolean embalagemLacreViolado,
 			String placa, float temperatura, int numeroConhecimento,
-			String motorista, String observacoes, Funcionarioo conferente,
-			List<Documento> anexoFotos, boolean aprovado,
+			String motorista, String observacoes, Funcionario conferente,
+			List<File> anexoFotos, boolean aprovado,
 			EntradaEstoque entradaEstoque) {
 		this.dataChegada = dataChegada;
 		this.lote = lote;
@@ -177,19 +179,19 @@ public class ChecklistRecebimentoComum {
 		this.observacoes = observacoes;
 	}
 
-	public Funcionarioo getConferente() {
+	public Funcionario getConferente() {
 		return conferente;
 	}
 
-	public void setConferente(Funcionarioo conferente) {
+	public void setConferente(Funcionario conferente) {
 		this.conferente = conferente;
 	}
 
-	public List<Documento> getAnexoFotos() {
+	public List<File> getAnexoFotos() {
 		return anexoFotos;
 	}
 
-	public void setAnexoFotos(List<Documento> anexoFotos) {
+	public void setAnexoFotos(List<File> anexoFotos) {
 		this.anexoFotos = anexoFotos;
 	}
 

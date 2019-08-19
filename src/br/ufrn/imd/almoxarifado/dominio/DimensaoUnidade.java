@@ -39,4 +39,9 @@ public class DimensaoUnidade {
 	public void setProfundidade(BigDecimal profundidade) {
 		this.profundidade = profundidade;
 	}
+
+	@Override
+	public String toString() {
+		return "DimensaoUnidade [altura=" + altura + ", largura=" + largura + ", profundidade=" + profundidade + "]";
+	}
 }

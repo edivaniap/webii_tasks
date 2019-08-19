@@ -1,16 +1,18 @@
 package br.ufrn.imd.almoxarifado.dominio;
 
+import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 public class EntradaEstoque {
 	private String coodigo;
-	private List<MovimentacaoEntada> itens;
+	private List<MovimentacaoEstoque> itens;
 	private StatusMovimentacao status;
 	private String observacoes;
 	private Usuario responsavel;
 	private Date dataCriacao;
 	private Date dataEntrada;
-	private List<Documento> anexos;
+	private List<File> anexos;
 	private boolean precisaConferenciaEstado;
 	private boolean precisaPassagem;
 	private boolean precisaAnalise;
@@ -24,8 +26,8 @@ public class EntradaEstoque {
 	public EntradaEstoque() { }
 	
 	
-	public EntradaEstoque(String coodigo, List<MovimentacaoEntada> itens, StatusMovimentacao status, String observacoes,
-			Usuario responsavel, Date dataCriacao, Date dataEntrada, List<Documento> anexos,
+	public EntradaEstoque(String coodigo, List<MovimentacaoEstoque> itens, StatusMovimentacao status, String observacoes,
+			Usuario responsavel, Date dataCriacao, Date dataEntrada, List<File> anexos,
 			boolean precisaConferenciaEstado, boolean precisaPassagem, boolean precisaAnalise, NotaFiscal notaFiscal,
 			ChecklistRecebimentoComum checklistRecebimentoComum, ConferenciaPesagem conferenciaPesagem,
 			ChecklistTransferencia checklistTransferencia, String justificativa, TipoEntrada tipoEntrada) {
@@ -65,11 +67,11 @@ public class EntradaEstoque {
 		this.coodigo = coodigo;
 	}
 
-	public List<MovimentacaoEntada> getItens() {
+	public List<MovimentacaoEstoque> getItens() {
 		return itens;
 	}
 
-	public void setItens(List<MovimentacaoEntada> itens) {
+	public void setItens(List<MovimentacaoEstoque> itens) {
 		this.itens = itens;
 	}
 
@@ -113,11 +115,11 @@ public class EntradaEstoque {
 		this.dataEntrada = dataEntrada;
 	}
 
-	public List<Documento> getAnexos() {
+	public List<File> getAnexos() {
 		return anexos;
 	}
 
-	public void setAnexos(List<Documento> anexos) {
+	public void setAnexos(List<File> anexos) {
 		this.anexos = anexos;
 	}
 
@@ -183,5 +185,17 @@ public class EntradaEstoque {
 
 	public void setTipoEntrada(TipoEntrada tipoEntrada) {
 		this.tipoEntrada = tipoEntrada;
+	}
+
+
+	@Override
+	public String toString() {
+		return "EntradaEstoque [coodigo=" + coodigo + ", itens=" + itens + ", status=" + status + ", observacoes="
+				+ observacoes + ", responsavel=" + responsavel + ", dataCriacao=" + dataCriacao + ", dataEntrada="
+				+ dataEntrada + ", anexos=" + anexos + ", precisaConferenciaEstado=" + precisaConferenciaEstado
+				+ ", precisaPassagem=" + precisaPassagem + ", precisaAnalise=" + precisaAnalise + ", notaFiscal="
+				+ notaFiscal + ", checklistRecebimentoComum=" + checklistRecebimentoComum + ", conferenciaPesagem="
+				+ conferenciaPesagem + ", checklistTransferencia=" + checklistTransferencia + ", justificativa="
+				+ justificativa + ", tipoEntrada=" + tipoEntrada + "]";
 	}
 }

@@ -70,4 +70,11 @@ public class Almoxarifado {
 	public void setLocalizacoes(List<LocalizacaoAlmoxarifado> localizacoes) {
 		this.localizacoes = localizacoes;
 	}
+
+	@Override
+	public String toString() {
+		return "Almoxarifado [nome=" + nome + ", chefe=" + chefe + ", tiposMateriais=" + tiposMateriais
+				+ ", usuariosAlmoxarifado=" + usuariosAlmoxarifado + ", enderecado=" + enderecado + ", localizacoes="
+				+ localizacoes + "]";
+	}	
 }

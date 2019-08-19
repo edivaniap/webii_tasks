@@ -1,7 +1,9 @@
 package br.ufrn.imd.almoxarifado.dominio;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 import br.ufrn.imd.almoxarifado.dominio.rh.Endereco;
 
@@ -11,7 +13,7 @@ public class ChecklistTransferencia {
 	private Endereco local;
 	private Date dataConferencia;
 	private String observacoes;
-	private List<Documento> anexoFotos;
+	private List<File> anexoFotos;
 	private boolean aprovado;
 
 	public ChecklistTransferencia() {
@@ -19,7 +21,7 @@ public class ChecklistTransferencia {
 
 	public ChecklistTransferencia(Material material, BigDecimal qtd,
 			Endereco local, Date dataConferencia, String observacoes,
-			List<Documento> anexoFotos, boolean aprovado) {
+			List<File> anexoFotos, boolean aprovado) {
 		this.material = material;
 		this.qtd = qtd;
 		this.local = local;
@@ -69,11 +71,11 @@ public class ChecklistTransferencia {
 		this.observacoes = observacoes;
 	}
 
-	public List<Documento> getAnexoFotos() {
+	public List<File> getAnexoFotos() {
 		return anexoFotos;
 	}
 
-	public void setAnexoFotos(List<Documento> anexoFotos) {
+	public void setAnexoFotos(List<File> anexoFotos) {
 		this.anexoFotos = anexoFotos;
 	}
 
@@ -83,5 +85,12 @@ public class ChecklistTransferencia {
 
 	public void setAprovado(boolean aprovado) {
 		this.aprovado = aprovado;
+	}
+
+	@Override
+	public String toString() {
+		return "ChecklistTransferencia [material=" + material + ", qtd=" + qtd + ", local=" + local
+				+ ", dataConferencia=" + dataConferencia + ", observacoes=" + observacoes + ", anexoFotos=" + anexoFotos
+				+ ", aprovado=" + aprovado + "]";
 	}
 }

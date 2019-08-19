@@ -26,4 +26,9 @@ public class ClassificacaoMaterial {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+
+	@Override
+	public String toString() {
+		return "ClassificacaoMaterial [nome=" + nome + ", codigo=" + codigo + "]";
+	}
 }
