@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Login Servlet</title>
 </head>
 <body>
 	<form action="logar" method="post">
 		<h1>Bem vindo!</h1>
 		<fieldset>
 			<p>
-				<input type="text" name="login" placeholder="Usuário..." required="required"/>
+				<input type="text" name="nomeUsuario" placeholder="Usuário..." />
 			</p>
 			<p>
-				<input type="password" name="senha" placeholder="Senha..." required="required"/>
+				<input type="password" name="senha" placeholder="Senha..." />
 			</p>
 			<p>
-				<input type="submit" value="Logar"/>
+				<input type="submit" value="Logar">
 			</p>
 		</fieldset>
 	</form>

@@ -7,34 +7,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.ufrn.imd.aulaservlet.dominio.Usuario;
+
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
+@WebServlet("/logar")
+public class LoginServlet extends HttpServlet {       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
     public LoginServlet() {
+        super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String nomeUsuario = request.getParameter("nomeUsuario");
+		String senha = request.getParameter("senha");
+		
+		if(nomeUsuario.equals("edivania") && senha.equals("epo")) {
+			Usuario usuario = new Usuario("Edivania Pontes", "edivania", "epo");
+			
+			request.getSession().setAttribute("usuario", usuario);
+			response.sendRedirect("/AulaServlet/paginas/conteudo.jsp");
+		} else {
+			response.sendRedirect("/AulaServlet/login.jsp");
+		}
 	}
-
+	
 }
