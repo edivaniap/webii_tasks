@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org./1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/include/template.xhtml">
+
+	<ui:define name="conteudo">
+		<h4>Listagem de Materiais - <h:outputText value="#{usuarioMBean.usuarioLogado.nomeUsuario}"/></h4>
+		
+		<h:form>
+			<h:dataTable value="#{materialMBean.materiaisDataModel}" var="material">
+				<h:column>
+					<f:facet name="header">Codigo</f:facet>
+					<h:outputText value="#{material.codigo}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Descricao</f:facet>
+					<h:outputText value="#{material.descricao}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Data</f:facet>
+					<h:outputText value="#{material.dataCadastro}"><f:convertDateTime pattern="dd/MM/yyyy"/></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Usuario</f:facet>
+					<h:outputText value="#{material.usuarioCadastro.nome}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Acao</f:facet>
+					<h:commandButton action="#{materialMBean.removerMaterial}" value="Remover"/>
+				</h:column>
+			</h:dataTable>
+			
+			<h:commandButton action="#{materialMBean.novoMaterial}" value="Cadastrar novo"/>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,4 +1,4 @@
-package br.ufrn.imd.material.controladores;
+package br.ufrn.imd.almoxarifado.controladores;
 
 import java.io.Serializable;
 
@@ -8,8 +8,8 @@ import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.ufrn.imd.material.dominio.Material;
-import br.ufrn.imd.material.repositorios.MaterialRepositorio;
+import br.ufrn.imd.almoxarifado.repositorios.MaterialRepositorio;
+import br.ufrn.imd.almoxarifado.dominio.Material;
 
 @Named("materialMBean")
 @SessionScoped
